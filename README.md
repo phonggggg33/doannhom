@@ -3,14 +3,10 @@ package doancmu;
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.ArrayList;
-	
-	// nhóm tui nhóm tui hehehehehehehe
 	interface IELECTRONICE_DEVICE {
 		double sum_total();
 	}
-
 	abstract class TV implements IELECTRONICE_DEVICE {
-		String acvfdgfđfgdgfdfgdfgdg;
 		private String tvID;
 		private String manifacturer;
 		private String entryDate;
@@ -23,30 +19,24 @@ import java.util.ArrayList;
 			this.entryDate = "";
 			this.price = 0;
 			this.num = 0;
-		
-			this.tvID = "";
-			this.manifacturer = "";
-			this.entryDate = "";
-			this.price = 0;
-			this.num = 0;
 		}
-	                 public String getTvID() {
+	        public String getTvID() {
 			return tvID;
 		}
 
-		             public void setTvID(String tvID) {
+		public void setTvID(String tvID) {
 			this.tvID = tvID;
 		}
 
-		         public String getManifacture() {
+		 public String getManifacture() {
 			return manifacturer;
 		}
 
-		   public void setManifacture(String manifacture) {
+		 public void setManifacture(String manifacture) {
 			this.manifacturer = manifacturer;
 		}
 
-		                   public String getEntryDate() {
+		public String getEntryDate() {
 			return entryDate;
 		}
 
@@ -74,22 +64,19 @@ import java.util.ArrayList;
 
 		void input() {
 			Scanner objSc = new Scanner(System.in);
-			System.out.print("    tvIDidididid: ");
+			System.out.print("tvID: ");
 			this.setTvID(objSc.nextLine());
-			System.out.print("manifacturerrrrrr: ");
+			System.out.print("manifacturer: ");
 			this.setManifacture(objSc.nextLine());
-			System.out.print("  entryDate: ");
+			System.out.print("entryDate: ");
 			this.setEntryDate(objSc.nextLine());
-			System.out.print(" price: ");
+			System.out.print("price: ");
 			this.setPrice(objSc.nextDouble());
 			objSc.nextLine();
-			System.out.print("         num: ");
+			System.out.print("num: ");
 			this.setNum(objSc.nextDouble());
 			objSc.nextLine();
 		}
-		{}
-		{}
-		{}
 		void output() {
 			System.out.println("\ntvID" + " " + this.getTvID() + "\nmanifacturer" + " " + this.getManifacture() + "\nentryDate"
 					+ " " + this.getEntryDate() + "\nprice" + " " + this.getPrice() + "\nnum" + " " + this.getNum());
@@ -181,7 +168,7 @@ import java.util.ArrayList;
 			do {
 				Scanner objSc = new Scanner(System.in);
 				TV[] tv = new TV[100];
-				System.out.println("(1)tivi SAMsung hay (2)tivi SOny ?");
+				System.out.println("(1)tivi samsung hay (2)tivi sony ?");
 				loai = objSc.nextInt();
 				if (loai == 1)
 					tv[n] = new TV_SS();
@@ -230,7 +217,7 @@ import java.util.ArrayList;
 			Scanner objSc = new Scanner(System.in);
 			System.out.print("\n\nNHAP ID CAN XOA: ");
 			tvID=objSc.nextLine();
-			for (int i = 0; i < list.size(); i--) {
+			for (int i = 0; i < list.size(); i++) {
 				if(list.get(i).getTvID().contains(tvID)) {
 					list.remove(i);
 				}
@@ -250,11 +237,9 @@ import java.util.ArrayList;
 		}
 	}
 
-public class test2  {
+public class muaTV  {
 	public static void main(String[] args) {
-		String ngayhomnaydepqua;
 		TVLIST list = new TVLIST();
-		int yesssssss;
 		list.input();
 		list.output();
 		list.delete();
